@@ -37,3 +37,6 @@ This update includes various improvements and fixes.
 ### Notes
 
 This update includes various improvements and fixes.
+
+# Improve error messages
+raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')

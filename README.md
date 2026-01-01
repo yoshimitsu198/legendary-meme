@@ -40,3 +40,11 @@ This update includes various improvements and fixes.
 
 # Improve error messages
 raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')
+
+# Implement retry logic
+for attempt in range(max_retries):
+    try:
+        return make_request()
+    except Exception:
+        if attempt == max_retries - 1:
+            raise

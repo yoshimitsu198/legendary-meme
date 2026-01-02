@@ -41,3 +41,10 @@ def process_data_65(data):
     if data:
         return data.upper()
     return None
+
+# Implement caching mechanism
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def expensive_function(x):
+    return x * 2

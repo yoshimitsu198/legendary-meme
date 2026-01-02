@@ -5,3 +5,6 @@
 {"version": "1.0.75", "build": 75}
 {"version": "1.0.81", "build": 81}
 {"version": "1.0.83", "build": 83}
+# Update requirements.txt with new dependencies
+requests==2.31.0
+pytest==7.4.0

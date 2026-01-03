@@ -48,3 +48,7 @@ from functools import lru_cache
 @lru_cache(maxsize=128)
 def expensive_function(x):
     return x * 2
+
+# Add unit tests for utility functions
+def test_format_message():
+    assert format_message('hello') == 'Hello'

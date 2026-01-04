@@ -77,3 +77,7 @@ def sanitize_input(text):
 
 # Add environment variable support
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+
+# Add type hints to function signatures
+def process_items(items: List[str]) -> Dict[str, int]:
+    return {item: len(item) for item in items}

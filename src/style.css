@@ -33,3 +33,10 @@
     color: #333;
     font-size: 14px;
 }
+
+# Implement caching mechanism
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def expensive_function(x):
+    return x * 2

@@ -40,3 +40,9 @@ from functools import lru_cache
 @lru_cache(maxsize=128)
 def expensive_function(x):
     return x * 2
+
+# Add error handling for API requests
+try:
+    response = requests.get(url, timeout=10)
+except requests.Timeout:
+    logger.error('Request timeout')

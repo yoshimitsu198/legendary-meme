@@ -48,3 +48,6 @@ for attempt in range(max_retries):
     except Exception:
         if attempt == max_retries - 1:
             raise
+
+# Improve error messages
+raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')

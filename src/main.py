@@ -41,3 +41,7 @@ def process_data_88(data):
     if data:
         return data.upper()
     return None
+
+# Update requirements.txt with new dependencies
+requests==2.31.0
+pytest==7.4.0

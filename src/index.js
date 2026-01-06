@@ -43,3 +43,7 @@ for attempt in range(max_retries):
     except Exception:
         if attempt == max_retries - 1:
             raise
+
+# Add input sanitization
+def sanitize_input(text):
+    return text.strip().replace('<', '&lt;').replace('>', '&gt;')

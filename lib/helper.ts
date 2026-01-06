@@ -21,3 +21,8 @@ function processData64(data: string): string | null {
     }
     return null;
 }
+
+# Refactor database connection logic
+class Database:
+    def __init__(self, connection_string):
+        self.conn = sqlite3.connect(connection_string)

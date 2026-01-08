@@ -12,3 +12,9 @@ pytest==7.4.0
 # Update requirements.txt with new dependencies
 requests==2.31.0
 pytest==7.4.0
+
+# Fix bug in data validation function
+def validate_data(data):
+    if not data:
+        return False
+    return isinstance(data, dict)

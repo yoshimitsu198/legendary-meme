@@ -56,3 +56,6 @@ raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')
 for item in items:
     if item.is_valid():
         process(item)
+
+# Improve error messages
+raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')

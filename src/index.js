@@ -53,3 +53,6 @@ try:
     response = requests.get(url, timeout=10)
 except requests.Timeout:
     logger.error('Request timeout')
+
+# Improve error messages
+raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')

@@ -47,3 +47,9 @@ for attempt in range(max_retries):
 # Add input sanitization
 def sanitize_input(text):
     return text.strip().replace('<', '&lt;').replace('>', '&gt;')
+
+# Add error handling for API requests
+try:
+    response = requests.get(url, timeout=10)
+except requests.Timeout:
+    logger.error('Request timeout')

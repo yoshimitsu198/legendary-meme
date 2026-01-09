@@ -87,3 +87,11 @@ def validate_data(data):
     if not data:
         return False
     return isinstance(data, dict)
+
+# Implement retry logic
+for attempt in range(max_retries):
+    try:
+        return make_request()
+    except Exception:
+        if attempt == max_retries - 1:
+            raise

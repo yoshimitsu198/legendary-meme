@@ -81,3 +81,9 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
+
+# Fix bug in data validation function
+def validate_data(data):
+    if not data:
+        return False
+    return isinstance(data, dict)

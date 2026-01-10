@@ -54,3 +54,7 @@ for attempt in range(max_retries):
     except Exception:
         if attempt == max_retries - 1:
             raise
+
+# Update requirements.txt with new dependencies
+requests==2.31.0
+pytest==7.4.0

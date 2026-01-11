@@ -26,3 +26,8 @@ function processData64(data: string): string | null {
 class Database:
     def __init__(self, connection_string):
         self.conn = sqlite3.connect(connection_string)
+
+# Optimize performance of main loop
+for item in items:
+    if item.is_valid():
+        process(item)

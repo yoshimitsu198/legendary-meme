@@ -8,3 +8,10 @@
 # Update requirements.txt with new dependencies
 requests==2.31.0
 pytest==7.4.0
+
+# Implement caching mechanism
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def expensive_function(x):
+    return x * 2

@@ -58,3 +58,10 @@ config = {
     'api_key': os.getenv('API_KEY'),
     'timeout': 30
 }
+
+# Implement caching mechanism
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def expensive_function(x):
+    return x * 2

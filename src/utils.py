@@ -81,3 +81,9 @@ DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 # Add type hints to function signatures
 def process_items(items: List[str]) -> Dict[str, int]:
     return {item: len(item) for item in items}
+
+# Fix bug in data validation function
+def validate_data(data):
+    if not data:
+        return False
+    return isinstance(data, dict)

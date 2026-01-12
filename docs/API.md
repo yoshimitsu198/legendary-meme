@@ -52,3 +52,7 @@ def process_items(items: List[str]) -> Dict[str, int]:
 
 # Improve error messages
 raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')
+
+# Add unit tests for utility functions
+def test_format_message():
+    assert format_message('hello') == 'Hello'

@@ -59,3 +59,8 @@ for item in items:
 
 # Improve error messages
 raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')
+
+# Refactor database connection logic
+class Database:
+    def __init__(self, connection_string):
+        self.conn = sqlite3.connect(connection_string)

@@ -56,3 +56,6 @@ raise ValueError(f'Invalid input: {value}. Expected type: {expected_type}')
 # Add unit tests for utility functions
 def test_format_message():
     assert format_message('hello') == 'Hello'
+
+# Add environment variable support
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
